@@ -97,7 +97,16 @@ footer {
 .reset-btn:hover {
   background: #4141ff;
 }
-
+.form-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.input-control{
+  padding: 4px 8px;
+  font-size: 16px;
+}
 footer {
   text-align: center;
 }
