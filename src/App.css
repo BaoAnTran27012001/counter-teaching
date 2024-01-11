@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+:root {
+  --vary-dark: #0E131D;
+  --dark-grey: #171E29;
+  --fade-white: #F7FAFB;
+  --primary-blue: #6060FF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  color: var(--fade-white);
+  background: var(--vary-dark);
+  font-family: 'Poppins', sans-serif;
+}
+
+nav,
+main,
+footer {
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem 0rem;
+}
+
+.logo {
+  font: 700 normal 1.5rem/2rem 'Poppins', sans-serif;
+}
+
+.card {
+  width: 350px;
+  margin: 3rem auto 2rem;
+}
+
+.count-ctn {
+  padding: 3rem 0;
+  text-align: center;
+  border-radius: 10px;
+  background: var(--primary-blue);
+  font: 500 normal 10rem/10rem 'Poppins', sans-serif;
+  box-shadow: 10px 10px 30px #090c13, -10px -10px 30px #090c13;
+}
+
+.btns-ctn,
+.change-count-ctn {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.change-count-ctn {
+  margin-left: 1rem;
+  width: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btns-ctn {
+  margin-top: 2rem;
+  padding: 0.95em 1.5rem;
+  border-radius: 8px;
+  box-shadow: 10px 10px 30px #090c13;
+  background-color: rgba(23, 30, 41, 0.75);
+}
+
+.increase-btn-ctn {
+  padding-top: 0.2rem;
+}
+
+.decrease-btn-ctn {
+  padding-bottom: 0.2rem;
+}
+
+.increase-svg,
+.decrease-svg {
+  width: 1.5rem;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.increase-svg:hover,
+.decrease-svg:hover {
+  background-color: var(--vary-dark);
+}
+
+.reset-btn {
+  border: none;
+  font: inherit;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.5rem 2.5rem;
+  transition: background 300ms;
+  background: var(--primary-blue);
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: #4141ff;
+}
+
+footer {
+  text-align: center;
 }
